@@ -5,4 +5,5 @@ i was thinking that we should just make like 3 different books in 3 different ge
 the genres could be sci-fi, mystery, and nonfiction
 i was thinking i could just make the different images to the specific diesions we need in photoshop
 we would need images to make the homepage and other pages interesting like on the javajam sites
-i looked at the barnes and noble website as an example for what we should make the site look like and it just had pictures of books on the homepage and i was thinking we could copy that, i kind of made it look like it in the wireframe
+i looked at the barnes and noble website as an example for what we should make the site look like
+it just had pictures of books on the homepage and i was thinking we could copy that, i kind of made it look like it in the wireframe
