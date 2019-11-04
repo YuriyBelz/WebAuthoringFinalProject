@@ -1,11 +1,186 @@
-* {
+* { box-sizing: border-box; }
+header, nav, main, footer { display: block; }
+.search{
+  overflow: hidden;
+  background-color: #e9e9e9;
+  height: 50px;
+}
+.search input[type=text] {
+  float: right;
+  padding: 6px;
+  padding-bottom: none;
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 8px; 
+  margin-right: 16px;
+  font-size: 17px;
+}
 
+
+header { background-color: #D2B48C;
+        height: 200px;
+       background-image: url(media/catinthehat.jpg);
+       background-repeat: no-repeat;
+
+}
+h1 { padding-top: 45px;
+    padding-left: 220px;
+	font-size: 3em; 
+}
+#wrapper { background-color: #FCEBB6;
+           width: 80%;
+           margin-right: auto;
+		   margin-left: auto;
+           min-width: 900px;
+		   max-width: 1280px;
+		   box-shadow: 3px 3px 3px #666666; 
+}
+body { background-color: #FCEBB6; 
+      background-image: url(media/catinthehat.jpg);
+      color: #221811;
+      font-family: Verdana, Arial, sans-serif;
+}
+main { padding: 0 0 2em 0;
+      margin-left: 200px;
+	  background-color: #FCEBB6;
+}
+
+nav { text-align: center; 
+     font-weight: bold; 
+	 font-size: 1.5em;
+	 padding-top: 10px;
+	 float: left;
+	 width: 200px;
+	 background-color: #edad2d;
+
+}
+nav a { text-decoration: none; }
+nav a:link { color: black; }
+nav a:visited{ color: white; }
+nav a:hover { color: gray; }
+nav ul { list-style-type: none;
+       padding-left: 0; 
+}
+
+footer { background-color: #D2B48C;
+       font-size: small;
+	   font-style: italic;
+	   text-align: center;
+	   padding-bottom: 10px;
+	   border-top: 2px #221811 solid;
+}
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 200px;
+  
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activeimg {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
 }
 
 @media only screen and (max-width: 1024px) {
-
+	body { background-image: none; }
+	#wrapper { width: auto;
+				min-width: 0;
+				margin: 0;
+				padding: 0;
+				box-shadow: none; 	}
+	header { border-bottom: 5px solid #FEF6C2; }
+	h1 { margin-top: 0;
+	    margin-bottom: 1em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		font-size: 2.5em; 	}
+	nav { float: none;
+	      width: auto;
+		  padding-top: 0;
+		  margin: 10px;
+		  font-size: 1.3em; 	}
+	nav li  { display: inline-block; }
+	nav a { padding: 1em; 
+	      width: 8em;
+		  font-weight: bold;
+		  border-style: none; }
+	nav ul { padding: 0;
+	       margin: 0; }
+	main { padding: 0;
+	      margin: 0;
+		  font-size: 90%; }
 }
 
 @media only screen and (max-width: 768px) {
-
+	header { background-image: url(images/javajammini.jpg); 
+			height: 128px; }
+	h1 { font-size: 2em;
+	     text-align: center;
+		 padding-left: 0; }
+	nav { margin: 0; }
+	nav a { display: block;
+	       padding: 0.2em;
+		   width: auto;
+		   border-bottom: 1px solid #FEF6C2; }
+	nav li { display: block; }
+	main  { padding-top: 1px; }
+	h2 { padding: 0.5em 0 0 0.5em;
 }
