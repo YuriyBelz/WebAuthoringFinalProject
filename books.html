@@ -14,6 +14,7 @@
 <body>
 <div id="wrapper">
 <header>
+  <h1>Nozama Books Available</h1>
 </header>
 <nav>
   <ul>
@@ -22,11 +23,58 @@
     <li><a href="about.html">About</a></li>
     <li><a href="jobs.html">Jobs</a></li>
   </ul>
+  <div id="NavRefine"><!--this is where the refine book display buttons will go-->
+    <fieldset>
+    <legend>Refine Search</legend>
+    <ul>
+      <li><input type="button" value="Reset" onclick=""</li><!--the name of the javascript file just goes in the onclick attribute-->
+      <li><input type="button" value="Mystery" onclick=""</li>
+      <li><input type="button" value="Nonfiction" onclick=""</li>
+      <li><input type="button" value="Sci-Fi" onclick=""</li>
+      <li><input type="button" value="Child" onclick=""</li>
+      <li><input type="button" value="Discount" onclick=""</li>
+    </ul>
+  </fieldset>
+  </div>
 </nav>
 <main>
+  <div id="bookCollection">
+  <div class="bookView" id="book1">/*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
+    <img src="media/book1thumb.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+    <img src="media/book1detail.jpg" alt="book detail" class="bookdetail" width="375" height="500">
+    <h4 class="bookTitle">United states History</h4>
+    <p class="bookDesc"> this book is about the Historyof the united states</p><br>
+    <p class="bookPrice">$25.00</p>
+  </div>
+  <div class="bookView" id="book2">
+
+  </div>
+  <div class="bookView" id="book3">
+
+  </div>
+  <div class="bookView" id="book4">
+
+  </div>
+  <div class="bookView" id="book5">
+
+  </div>
+  <div class="bookView" id="book6">
+
+  </div>
+  <div class="bookView" id="book7">
+
+  </div>
+  <div class="bookView" id="book8">
+
+  </div>
+  <div class="bookView" id="book9">
+
+  </div>
 </div>
 </main>
 <footer>
+  Copyright &copy; 2019 Nozama<br>
+<a href="mailto:yourfirstname@yourlastname.com">RickyAndYuriy@nozama.com</a>
 </footer>
 </div>
 </body>
