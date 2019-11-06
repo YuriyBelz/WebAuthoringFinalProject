@@ -27,47 +27,48 @@
     <fieldset>
     <legend>Refine Search</legend>
     <ul>
-      <li><input type="button" value="Reset" onclick="scripts/searchRefine.js"</li><!--the name of the javascript file just goes in the onclick attribute-->
-      <li><input type="button" value="Mystery" onclick=""</li>
-      <li><input type="button" value="Nonfiction" onclick=""</li>
-      <li><input type="button" value="Sci-Fi" onclick=""</li>
-      <li><input type="button" value="Child" onclick=""</li>
-      <li><input type="button" value="Discount" onclick=""</li>
+      <li><input type="button" value="Reset" onclick="scripts/searchRefine/reset.js"</li><!--the name of the javascript file just goes in the onclick attribute-->
+      <li><input type="button" value="Mystery" onclick="scripts/searchRefine/mystery.js"</li>
+      <li><input type="button" value="Nonfiction" onclick="scripts/searchRefine/nonfic.js"</li>
+      <li><input type="button" value="Sci-Fi" onclick="scripts/searchRefine/scifi.js"</li>
+      <li><input type="button" value="Child" onclick="scripts/searchRefine/child.js"</li>
+      <li><input type="button" value="Discount" onclick="scripts/searchRefine/discount.js"</li>
     </ul>
   </fieldset>
   </div>
 </nav>
 <main>
   <div id="bookCollection">
-  <div class="bookView" class="nonfic"id="book1">/*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
+  <div class="bookView nonfic" id="book1">/*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
     <img src="media/book1thumb.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
     <img src="media/book1detail.jpg" alt="book detail" class="bookdetail" width="375" height="500">
     <h4 class="bookTitle">United states History</h4>
     <p class="bookDesc"> this book is about the Historyof the united states</p><br>
     <p class="bookPrice">$25.00</p>
   </div>
-  <div class="bookView" class="child" id="book2">
+  <div class="bookView child" id="book2">
+  <!--apparently elements can have different classes they just have to be declared in the same attribute and separated by spaces-->
 
   </div>
-  <div class="bookView" class="child" class="discount" id="book3">
+  <div class="bookView child discount" id="book3">
 
   </div>
-  <div class="bookView" class ="mystery" id="book4">
+  <div class="bookView mystery" id="book4">
 
   </div>
-  <div class="bookView" class="scifi" id="book5">
+  <div class="bookView scifi" id="book5">
 
   </div>
-  <div class="bookView" class="scifi" id="book6">
+  <div class="bookView scifi" id="book6">
 
   </div>
-  <div class="bookView" class="mystery" class ="discount"id="book7">
+  <div class="bookView mystery" id="book7">
 
   </div>
-  <div class="bookView" class="nonfic" class="discount" id="book8">
+  <div class="bookView nonfic" id="book8">
 
   </div>
-  <div class="bookView" class="scifi" class="discount" id="book9">
+  <div class="bookView scifi discount" id="book9">
 
   </div>
 </div>
