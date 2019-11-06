@@ -1,9 +1,10 @@
 var slideIndex = 0;
-showSlides();
+showFeaturedSlides();
+showSaleSlides();
 
-function showSlides() {
+function showFeaturedSlides() {
   var i;
-  var slides = document.getElementsByClassName("mySlides");
+  var slides = document.getElementsByClassName("featuredSlides");
   var dots = document.getElementsByClassName("dot");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
@@ -15,5 +16,21 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); 
+  setTimeout(showFeaturedSlides, 2000); 
+}
+function showSaleSlides() {
+  var i;
+  var slides = document.getElementsByClassName("saleSlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSaleSlides, 2000); 
 }
