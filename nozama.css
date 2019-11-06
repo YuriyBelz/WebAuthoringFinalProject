@@ -163,9 +163,14 @@ nav legend{
   font-size: small;
 }
 
+fieldset input {
+  background-color: #edad2d;
+}
+
 .bookView {
+  display: block;
   border: 1px solid #000000;
-  margin : 25px
+  margin : 25px;
 }
 
 .bookview img {
@@ -184,7 +189,6 @@ nav legend{
   position: absolute;
   margin-bottom: 1em;
 }
-
 /*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
 .bookdetail {
   display: none;
