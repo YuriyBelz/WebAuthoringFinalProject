@@ -26,7 +26,7 @@ header, nav, main, footer {
 header {
   background-color: #D2B48C;
   height: 150px;
-  
+
   background-image: url(media/nozamalogo.jpg);
   background-repeat: no-repeat;
 }
@@ -60,7 +60,7 @@ body {
 main {
   padding: 0 0 2em 0;
   margin-left: 200px;
-  
+
   background-color: #FCEBB6;
 }
 
@@ -106,7 +106,7 @@ footer {
 
 .featuredSlides, .saleSlides {
   display: none;
-  
+
 }
 
 img {
@@ -118,10 +118,10 @@ img {
 	padding: 0 0 2em 0;
 	margin-left: 20%;
 	margin-right: 2em;
-	
+
 	display:inline-block;
-	
-	
+
+
 }
 #saleBooksSlides{
 	margin-left: auto;
@@ -132,7 +132,7 @@ img {
 }
 /* Slideshow container */
 .slideshow-container {
-  
+
   max-width: 200px;
   position: relative;
   margin: auto;
@@ -204,14 +204,12 @@ fieldset input {
 }
 
 .bookview p {
-  margin-left: 125px;
-  position: absolute;
+white-space: nowrap;
 }
 
 .bookview h4 {
-  margin-left: 125px;
+
   text-decoration: underline;
-  position: absolute;
   margin-bottom: 1em;
 }
 /*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
