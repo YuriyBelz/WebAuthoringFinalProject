@@ -205,12 +205,14 @@ fieldset input {
 
 .bookview p {
 white-space: nowrap;
+clear:left;
 }
 
 .bookview h4 {
 
   text-decoration: underline;
   margin-bottom: 1em;
+  clear: left;
 }
 /*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
 .bookdetail {
