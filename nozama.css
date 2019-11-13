@@ -24,7 +24,7 @@ header, nav, main, footer {
 }
 
 header {
-  background-color: #D2B48C;
+  background-color: #007D99;
   height: 150px;
 
   background-image: url(media/nozamalogo.png);
@@ -35,23 +35,24 @@ h1 {
   padding-top: 45px;
   padding-left: 220px;
   font-size: 3em;
+  color: white;
 }
 h2{
 	text-align:center;
 }
 
 #wrapper {
-  background-color: #FCEBB6;
+  background-color: #007D99;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
   min-width: 900px;
   max-width: 1280px;
-  box-shadow: 3px 3px 3px #666666;
+  box-shadow: 3px 3px 3px black;
 }
 
 body {
-  background-color: #FCEBB6;
+  background-color: white;
   background-image: url(media/catinthehat.jpg);
   color: #221811;
   font-family: Verdana, Arial, sans-serif;
@@ -61,7 +62,7 @@ main {
   padding: 0 0 2em 0;
   margin-left: 200px;
 
-  background-color: #FCEBB6;
+  background-color: white;
 }
 
 nav {
@@ -71,12 +72,15 @@ nav {
   padding-top: 10px;
   float: left;
   width: 200px;
-  background-color: #edad2d;
+  background-color: #007D99;
 }
 
 nav a {
   text-decoration: none;
 }
+a [href^="mailto"] { 
+  color: white; 
+  }
 
 nav a:link {
   color: black;
@@ -96,7 +100,7 @@ nav ul {
 }
 
 footer {
-  background-color: #D2B48C;
+  background-color: #007D99;
   font-size: small;
   font-style: italic;
   text-align: center;
@@ -186,10 +190,11 @@ nav fieldset{
 }
 nav legend{
   font-size: small;
+  color : white;
 }
 
 fieldset input {
-  background-color: #edad2d;
+  background-color: #007D99;
 }
 
 .bookView {
@@ -218,6 +223,10 @@ clear:left;
 .bookdetail {
   display: none;
   position: static;
+}
+
+nav input{
+  color : white;
 }
 
 @-webkit-keyframes fade {
