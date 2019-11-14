@@ -23,7 +23,7 @@ header, nav, main, footer {
 }
 
 header {
-  background-color: #007D99;
+  background-color: #708090;
   height: 150px;
 
   background-image: url(media/nozamalogo.png);
@@ -41,7 +41,7 @@ h2{
 }
 
 #wrapper {
-  background-color: #007D99;
+  background-color: #BDC3C7;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
@@ -54,7 +54,7 @@ body {
   background-color: white;
   background-image: url(media/catinthehat.jpg);
   color: #221811;
-  font-family: Verdana, Arial, sans-serif;
+  font-family: Roboto, Verdana, Arial, sans-serif;
 }
 
 main {
@@ -71,7 +71,8 @@ nav {
   padding-top: 10px;
   float: left;
   width: 200px;
-  background-color: #007D99;
+  background-color: #BDC3C7;
+  /*background-color: #007D99;*/
 }
 
 nav a {
@@ -99,7 +100,7 @@ nav ul {
 }
 
 footer {
-  background-color: #007D99;
+  background-color: #708090;
   font-size: small;
   font-style: italic;
   text-align: center;
@@ -193,12 +194,13 @@ nav legend{
 }
 
 fieldset input {
-  background-color: #007D99;
+  background-color: #708090;;
 }
 
 .bookcollection {
   padding: 1em;
   overflow: hidden;
+  
 }
 
 .bookView {
@@ -207,6 +209,7 @@ fieldset input {
   margin : 25px;
   overflow: hidden;
   margin-top: 1em;
+ 
 }
 
 .bookthumb {
@@ -216,6 +219,8 @@ fieldset input {
 
 .bookdesc {
   float: left;
+  overflow: auto;
+  max-width: 70%;
 }
 /*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
 .bookdetail {
