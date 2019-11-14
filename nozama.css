@@ -6,7 +6,6 @@ header, nav, main, footer {
   display: block;
 }
 
-
 .search {
   overflow: hidden;
   background-color: #e9e9e9;
@@ -197,27 +196,26 @@ fieldset input {
   background-color: #007D99;
 }
 
+.bookcollection {
+  padding: 1em;
+  overflow: hidden;
+}
+
 .bookView {
   display: block;
   border: 1px solid #000000;
   margin : 25px;
+  overflow: hidden;
+  margin-top: 1em;
 }
 
-.bookview img {
+.bookthumb {
   float: left;
-  margin-left: 25px;
+  padding: 1em;
 }
 
-.bookview p {
-white-space: nowrap;
-clear:left;
-}
-
-.bookview h4 {
-
-  text-decoration: underline;
-  margin-bottom: 1em;
-  clear: left;
+.bookdesc {
+  float: left;
 }
 /*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
 .bookdetail {
@@ -270,7 +268,7 @@ nav input{
   }
 
   header {
-    border-bottom: 5px solid #FEF6C2;
+    border-bottom: .5em solid white;
   }
 
   h1 {
@@ -348,3 +346,4 @@ nav input{
   h2 {
     padding: 0.5em 0 0 0.5em;
   }
+}
