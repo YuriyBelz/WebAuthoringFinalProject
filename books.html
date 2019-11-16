@@ -27,7 +27,7 @@
     <fieldset>
     <legend>Refine Search</legend>
     <ul>
-      <li><input type="button" value="Reset" onclick="reset()"</li><!--the name of the javascript file just goes in the onclick attribute-->
+      <li><input type="button" value="Reset" onclick="reset()"</li><!--the name of the javascript function just goes in the onclick attribute-->
       <li><input type="button" value="Mystery" onclick="mystery()"</li>
       <li><input type="button" value="Nonfiction" onclick="nonfic()"</li>
       <li><input type="button" value="Sci-Fi" onclick="scifi()"</li>
@@ -39,93 +39,94 @@
 </nav>
 <main>
   <div id="bookCollection">
-  <div class="bookView nonfic" id="book1">
+    <!--i made it so the books are numbered like they would in an array-->>
+  <div class="bookView nonfic" id="book0">
     <!--i found out what was wrong with the text showing up after the book, i put the text in a div, floated it left, and then made the bookview container have a style of overflow:hidden-->
       <div class="bookthumb">
-        <img src="media/book1detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+        <a href="individualbook.html" onclick="morebookdetail(0)"><img src="media/book0detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100"></a>
       </div>
       <div class="bookdesc">
-        <h4>United States History</h4>
+        <a href="individualbook.html" onclick="morebookdetail(0)"><h4>United States History</h4></a>
         A history of the united states.<br>
         $24.99
       </div>
   </div>
-  <div class="bookView child" id="book2">
+  <div class="bookView child" id="book1">
     <div class="bookthumb">
-      <img src="media/book2detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(1)"><img src="media/book1detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>Cat in the Hat</h4>
+      <a href="individualbook.html" onclick="morebookdetail(1)"><h4>Cat in the Hat</h4></a>
       The Cat shows up at the house of Sally and her brother one rainy day when their mother is away.<br>
       $8.99
     </div>
   </div>
-  <div class="bookView child discount" id="book3">
+  <div class="bookView child discount" id="book2">
     <div class="bookthumb">
-      <img src="media/book3detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(2)"><img src="media/book2detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>Oh, the Places You'll Go!</h4>
+      <a href="individualbook.html" onclick="morebookdetail(2)"><h4>Oh, the Places You'll Go!</h4></a>
       Oh, the places youll go!<br>
       $8.99
     </div>
   </div>
-  <div class="bookView mystery" id="book4">
+  <div class="bookView mystery" id="book3">
     <div class="bookthumb">
-      <img src="media/book4detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(3)"><img src="media/book3detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>Sherlock Holmes</h4>
+      <a href="individualbook.html" onclick="morebookdetail(3)"><h4>Sherlock Holmes</h4></a>
       The world's greatest detective solves some mysteries.<br>
       $14.99
     </div>
   </div>
-  <div class="bookView scifi" id="book5">
+  <div class="bookView scifi" id="book4">
     <div class="bookthumb">
-      <img src="media/book5detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(4)"><img src="media/book4detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>Hitchhiker's Guide to the Galaxy</h4>
+      <a href="individualbook.html" onclick="morebookdetail(4)"><h4>Hitchhiker's Guide to the Galaxy</h4></a>
       Travel the galaxy with the Hitchhiker's Guide to the Galaxy.<br>
       price here
     </div>
   </div>
-  <div class="bookView scifi" id="book6">
+  <div class="bookView scifi" id="book5">
     <div class="bookthumb">
-      <img src="media/book6detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(5)"><img src="media/book5detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>Fahrenheit 451</h4>
+      <a href="individualbook.html" onclick="morebookdetail(5)"><h4>Fahrenheit 451</h4></a>
       In the future firefighters start fires instead of putting them out.<br>
       $11.99
     </div>
   </div>
-  <div class="bookView mystery" id="book7">
+  <div class="bookView mystery" id="book6">
     <div class="bookthumb">
-      <img src="media/book7detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(6)"><img src="media/book6detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>The Big Sleep</h4>
+      <a href="individualbook.html" onclick="morebookdetail(6)"><h4>The Big Sleep</h4></a>
       Philip Marlowe is a private detective in the 40's.<br>
       $9.99
     </div>
   </div>
-  <div class="bookView nonfic" id="book8">
+  <div class="bookView nonfic" id="book7">
     <div class="bookthumb">
-      <img src="media/book8detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(7)"><img src="media/book7detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>The Greatest Generation</h4>
+      <a href="individualbook.html" onclick="morebookdetail(7)"><h4>The Greatest Generation</h4></a>
       A collection of stories from the Greatest Generation.<br>
       $9.99
     </div>
   </div>
-  <div class="bookView scifi discount" id="book9">
+  <div class="bookView scifi discount" id="book8">
     <div class="bookthumb">
-      <img src="media/book9detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" >
+      <a href="individualbook.html" onclick="morebookdetail(8)"><img src="media/book8detail.jpg" alt="book thumnail" class="bookThumb" width="75" height="100" ></a>
     </div>
     <div class="bookdesc">
-      <h4>Dune</h4>
+      <a href="individualbook.html" onclick="morebookdetail(8)"><h4>Dune</h4></a>
       Dune tells the story of young Paul Atreides, whose family accepts the stewardship of the planet Arrakis.<br>
       $19.99
     </div>
@@ -138,5 +139,6 @@
 </footer>
 </div>
 <script src="scripts/searchRefine/refineFunctions.js"></script>
+<script>src="scripts/toindividualbook.js"</script>
 </body>
 </html>

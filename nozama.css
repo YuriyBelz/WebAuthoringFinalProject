@@ -209,7 +209,10 @@ fieldset input {
   margin : 25px;
   overflow: hidden;
   margin-top: 1em;
- 
+}
+
+.bookviewlarge{
+display: none;
 }
 
 .bookthumb {
