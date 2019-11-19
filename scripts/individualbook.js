@@ -1,7 +1,7 @@
 /*this should execute when the page initially loads getting the value
 of the book that you want to display from the cookie and setting
 it to display*/
-document.getElementById("individualbookheader").textContent += document.cookie.chosenLink;
+document.getElementById("individualbookheader").textContent += document.cookie.chosenLink ;
 document.getElementsByClassName("bookviewlarge")[document.cookie.chosenLink].style.display = "show";
 
 /*this function will add to the cart

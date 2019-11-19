@@ -1,0 +1,2 @@
+https://www.smashingmagazine.com/2014/02/create-client-side-shopping-cart/
+the link above is a tutorial for how to make a shopping cart in js
