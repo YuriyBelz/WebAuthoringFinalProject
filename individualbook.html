@@ -22,6 +22,7 @@
     <li><a href="books.html">Browse</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="jobs.html">Jobs</a></li>
+    <li><a onclick="cartCheck()">Cart</a></li><!--this intentionally does not have an href-->
   </ul>
 </nav>
 <main>
@@ -38,7 +39,7 @@
         Publisher: HarperCollins Publishers<br>
         Page count: 299<br>
         $24.99<br>
-        <input type="button" value="Add to Cart" onclick="">
+        <input type="button" value="Add to Cart" onclick="addToCart(0)">
       </div>
   </div>
   <div class="bookViewlarge" id="book1large">
@@ -52,7 +53,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 299<br>
       $8.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(1)">
     </div>
   </div>
   <div class="bookViewlarge" id="book2large">
@@ -66,7 +67,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 29<br>
       $8.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(2)">
     </div>
   </div>
   <div class="bookViewlarge" id="book3large">
@@ -80,7 +81,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 299<br>
       $14.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(3)">
     </div>
   </div>
   <div class="bookViewlarge" id="book4large">
@@ -94,7 +95,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 299<br>
       price here<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(4)">
     </div>
   </div>
   <div class="bookViewlarge" id="book5large">
@@ -108,7 +109,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 451<br>
       $11.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(5)">
     </div>
   </div>
   <div class="bookViewlarge" id="book6large">
@@ -122,7 +123,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 451<br>
       $9.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(6)">
     </div>
   </div>
   <div class="bookViewlarge" id="book7large">
@@ -136,7 +137,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 451<br>
       $9.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(7)">
     </div>
   </div>
   <div class="bookViewlarge" id="book8large">
@@ -150,7 +151,7 @@
       Publisher: HarperCollins Publishers<br>
       Page count: 5273<br>
       $19.99<br>
-      <input type="button" value="Add to Cart" onclick="">
+      <input type="button" value="Add to Cart" onclick="addToCart(8)">
     </div>
   </div>
 </div>

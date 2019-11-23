@@ -1,2 +1,12 @@
+//------------------------------cookie tutorials-----------------------------------
 https://www.smashingmagazine.com/2014/02/create-client-side-shopping-cart/
 the link above is a tutorial for how to make a shopping cart in js
+
+https://youtu.be/j0PpT96EFeg
+https://gist.github.com/prof3ssorSt3v3/5813c6c011732027f80d8cdc079ada32
+
+the links above are how i found out how to initialize the cookies
+the youtube link is of someone explaining them and the github is the code
+that they use
+
+//-----------------------------------------------------------------------------------
