@@ -211,8 +211,9 @@ fieldset input {
   margin-top: 1em;
 }
 
-.bookviewlarge{
+.bookViewlarge{
 display: none;
+overflow: hidden;
 }
 
 .bookthumb {
@@ -225,7 +226,13 @@ display: none;
   overflow: auto;
   max-width: 70%;
 }
-/*add js to make it so when the thumbnail is clicked bookdetail is set to display*/
+
+.bookdesc {
+  float: left;
+  overflow: auto;
+  max-width: 70%;
+}
+
 .bookdetail {
   display: none;
   position: static;
@@ -235,6 +242,18 @@ nav input{
   color : white;
 }
 
+#carttotal {
+  margin : auto;
+  min-height: 50%;
+}
+
+#aboutText {
+  margin : 25px;
+}
+
+#jobForm {
+  margin: 1em;
+}
 @-webkit-keyframes fade {
   from {
     opacity: .4
@@ -321,7 +340,7 @@ nav input{
 
 @media only screen and (max-width: 768px) {
   header {
-    background-image: url(images/javajammini.jpg);
+    background-image: url(images/nozamalogosmall.jpg);
     /*remember to make a mini version of the logo, we are are using the javajam version here*/
     height: 128px;
   }

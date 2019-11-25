@@ -1,5 +1,5 @@
 //we need to recreate all the arrays storing the book information from the cookie
-var prices = getCookie("cart").split('|').map(function(item) { return parseFloat(item).toFixed(2);}); 
+var prices = getCookie("prices").split('|').map(function(item) { return parseFloat(item).toFixed(2);}); 
 // prices was cast to a float with 2 decimal places
 var titles = getCookie("titles").split('|');
 //titles is just strings
@@ -31,20 +31,21 @@ buildTotal();
 
     for(var i = 0; i < cart.length; i++){
         if(cart[i] > 0){
-            total += (cart[i] * prices[i]);
-            document.getElementById("carttotal").innerHTML +=  titles[i] + " X " + cart[i] + " = " (cart[i] * prices[i])
+            total += (parseFloat(cart[i]).toFixed(2) * prices[i]);
+            document.getElementById("carttotal").innerHTML +=  titles[i] + " X " + cart[i] + " = " + (cart[i] * prices[i])
              + `<input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${cart[i]})'>` + "<br>";
         }
     }
-    tax = (total * .04).toFixed(2); //4% tax
-    grandTotal = tax + total;
+    tax = parseFloat((total * .04).toFixed(2)); //4% tax
+    grandTotal = (tax + total);
     document.getElementById("carttotal").innerHTML += "<hr>" + "Total: " + total + "<br>" + "Tax: " + tax + "<br>" + "Grand Total: " + grandTotal;
     document.cookie = `grandtotal=${grandTotal};path=/;`//saves the total for later use
   }
 
   function removeOne(bookId){
-    cart[bookId]--;
-    document.cookie = `cart=${cart.join('|')};path=/;`;//we need to send the updated cart back to the cookie
+    var cartToRemove = getCookie("cart").split('|').map(function(item) { return parseInt(item, 10);});
+    cartToRemove[bookId]--;
+    document.cookie = `cart=${cartToRemove.join('|')};path=/;`;//we need to send the updated cart back to the cookie
     buildTotal();
   /*this function is only ever called in the build total function so im assuming it should have access to the cart array in it.
     the index of the book we are removing one from is passed in
@@ -56,7 +57,7 @@ buildTotal();
   function getCookie(name) {
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
-    if (parts.length == 2) return parts.pop().split(";").shift();
+    if (parts.length == 2) return parts.pop().split(";").shift() ;
   }
 
   function cartCheck(){

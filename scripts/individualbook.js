@@ -2,9 +2,8 @@
 of the book that you want to display from the cookie and setting
 it to display*/
 
-document.getElementById("individualbookheader").textContent += getCookie("chosenLink");
-var chosenLink = parseInt(getCookie("chosenLink"),10);
-document.getElementsByClassName("bookviewlarge")[chosenLink].style.display = "show";
+document.getElementsByTagName("h1")[0].innerText += getCookie("chosenLink");
+document.getElementsByClassName("bookViewlarge")[parseInt(getCookie("chosenLink"),10)].style.display = "block";
 
 /*this function will add to the cart
 whenever the button is pressed the element on the array corresponding to 
@@ -15,7 +14,7 @@ i think it might be problematic for the memory usage to retrieve the cookie and
 map it every time the cart is used but i didnt want to make it into an array that just exists
 when the page is active because i it would have to be put back into the cookie when you choose
 to leave the page using an anchor tag, im not 100% sure of this is true that it would be a problem
-but i think that when you click on an anchor it doesnt might not run a script in an onclick event
+but i think that when you click on an anchor it might not run a script in an onclick event
 it just goes to the link first and forgets the script
 */
 

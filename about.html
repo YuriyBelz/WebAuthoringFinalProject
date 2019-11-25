@@ -26,9 +26,10 @@
   </ul>
 </nav>
 <main>
+    <span>&nbsp</span>
 <h2>Our Values</h2>
-<p>At Nozama, we always work to provide the best deals on the best books. We were founded in 2019 by two students at Pace University.</p>
-<h2>Our CEO's</h2>
+<p id="aboutText">At Nozama, we always work to provide the best deals on the best books. We were founded in 2019 by two students at Pace University.</p>
+<h2>Our CEOs</h2>
 <div class="bookView">
     <div class="bookthumb">
     <img src="media/ricky.jpg" alt="Ricky Harris" class="bookThumb" width="75" height="100" ></a>
@@ -54,6 +55,22 @@
   Copyright &copy; 2019 Nozama<br>
 <a href="mailto:yourfirstname@yourlastname.com">RickyAndYuriy@nozama.com</a>
 </footer>
+<script>
+    function getCookie(name) {
+      var value = "; " + document.cookie;
+      var parts = value.split("; " + name + "=");
+      if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+  
+    function cartCheck(){
+    var tempCart = getCookie("cart");
+    tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});
+    var sum = tempCart.reduce(function(a, b) { return a + b; }, 0);
+    if(sum == 0) 
+        alert("There is nothing in the cart, please add something");
+    else
+        window.location.assign("cart.html");}
+  </script>
 </div>
 </body>
 </html>
