@@ -1,6 +1,6 @@
 //we need to recreate all the arrays storing the book information from the cookie
 var prices = getCookie("prices").split('|').map(function(item) { return parseFloat(item).toFixed(2);}); 
-// prices was cast to a float with 2 decimal places
+// prices was cast to a string with 2 decimal places
 var titles = getCookie("titles").split('|');
 //titles is just strings
 
@@ -28,12 +28,16 @@ buildTotal();
     var total = 0.00;
     var tax;
     var grandTotal;
-
     for(var i = 0; i < cart.length; i++){
         if(cart[i] > 0){
             total += (parseFloat(cart[i]).toFixed(2) * prices[i]);
-            document.getElementById("carttotal").innerHTML +=  titles[i] + " X " + cart[i] + " = " + (cart[i] * prices[i])
-             + `<input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${cart[i]})'>` + "<br>";
+            document.getElementById("carttotal").innerHTML +=  
+             titles[i] + 
+            " X " +
+            cart[i] +  
+            " = " +
+            (cart[i] * prices[i]) + 
+             `<input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${cart[i]})'><br>`;
         }
     }
     tax = parseFloat((total * .04).toFixed(2)); //4% tax

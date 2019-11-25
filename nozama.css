@@ -254,6 +254,15 @@ nav input{
 #jobForm {
   margin: 1em;
 }
+
+#carttotal {
+  margin : 1em;
+}
+
+.removebutton {
+  float : right;
+}
+
 @-webkit-keyframes fade {
   from {
     opacity: .4
@@ -341,7 +350,6 @@ nav input{
 @media only screen and (max-width: 768px) {
   header {
     background-image: url(images/nozamalogosmall.jpg);
-    /*remember to make a mini version of the logo, we are are using the javajam version here*/
     height: 128px;
   }
 
