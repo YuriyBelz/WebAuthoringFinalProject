@@ -43,19 +43,3 @@ function reset(){
 		document.getElementsByClassName("bookView")[i].style.display = "block";
 	}
 }
-
-function cartCheck(){
-	var tempCart = getCookie("cart");
-	tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});
-	var sum = tempCart.reduce(function(a, b) { return a + b; }, 0);
-	if(sum == 0) 
-		alert("There is nothing in the cart, please add something");
-	else
-		window.location.assign("cart.html");
-  }
-  
-  function getCookie(name) {
-	var value = "; " + document.cookie;
-	var parts = value.split("; " + name + "=");
-	if (parts.length == 2) return parts.pop().split(";").shift();
-  }

@@ -32,13 +32,3 @@ function getCookie(name) {
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
   }
-
-  function cartCheck(){//this function checks if there is anything in the cart, if yes it takes you to the cart page, if not there is an alert
-    var tempCart = getCookie("cart");
-    tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});
-    var sum = tempCart.reduce(function(a, b) { return a + b; }, 0);
-    if(sum == 0) 
-        alert("There is nothing in the cart, please add something");
-    else
-        window.location.assign("cart.html");
-  }

@@ -92,25 +92,3 @@ function deadlineCounter(){
 
   }, 1000);
 }
-
-//------------------------------cart check-------------------------------------------
-
-/*this function shouls be called whenever the cart is clicked, it checks if there is anything in the cart by looping through the cart array and 
-checking if there is anything in the aray other than zero. if there is anthying then it takes you to the cart page. if not then it alerts you 
-that there is nothing in it*/
-
-function cartCheck(){
-  var tempCart = getCookie("cart");
-  tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});
-  var sum = tempCart.reduce(function(a, b) { return a + b; }, 0);
-  if(sum == 0) 
-      alert("There is nothing in the cart, please add something");
-  else
-      window.location.assign("cart.html");
-}
-
-function getCookie(name) {
-  var value = "; " + document.cookie;
-  var parts = value.split("; " + name + "=");
-  if (parts.length == 2) return parts.pop().split(";").shift();
-}
