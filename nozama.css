@@ -259,10 +259,6 @@ nav input{
   margin : 1em;
 }
 
-.removebutton {
-  float : right;
-}
-
 @-webkit-keyframes fade {
   from {
     opacity: .4

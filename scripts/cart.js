@@ -23,33 +23,35 @@ buildTotal();
     from the individual book page*/
 
     document.getElementById("carttotal").innerHTML = "";
-    //the innerhtml must be set to nothing to completely reset it, when the page is first made it wouldnt do anything
+    //the innerhtml must be set to nothing to completely reset it when reloading after, when the page is first made it wouldnt do anything
 
     var total = 0.00;
-    var tax;
-    var grandTotal;
+    var tax  = 0.00;
+    var grandTotal = 0.00;
     for(var i = 0; i < cart.length; i++){
         if(cart[i] > 0){
-            total += (parseFloat(cart[i]).toFixed(2) * prices[i]);
+            total += (cart[i] * prices[i]);
             document.getElementById("carttotal").innerHTML +=  
              titles[i] + 
             " X " +
             cart[i] +  
-            " = " +
+            " = $" +
             (cart[i] * prices[i]) + 
-             `<input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${cart[i]})'><br>`;
+             `<br><input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${i})'><br>`;
         }
     }
-    tax = parseFloat((total * .04).toFixed(2)); //4% tax
+    tax = parseFloat(total * .04); //4% tax
     grandTotal = (tax + total);
-    document.getElementById("carttotal").innerHTML += "<hr>" + "Total: " + total + "<br>" + "Tax: " + tax + "<br>" + "Grand Total: " + grandTotal;
+    document.getElementById("carttotal").innerHTML += "<hr>" + "Total: $" + total.toFixed(2) + "<br>" + "Tax: $" + tax.toFixed(2) + "<br>" + "Grand Total: $" + grandTotal.toFixed(2);
     document.cookie = `grandtotal=${grandTotal};path=/;`//saves the total for later use
   }
 
   function removeOne(bookId){
-    var cartToRemove = getCookie("cart").split('|').map(function(item) { return parseInt(item, 10);});
-    cartToRemove[bookId]--;
-    document.cookie = `cart=${cartToRemove.join('|')};path=/;`;//we need to send the updated cart back to the cookie
+    var tempCart = getCookie("cart");//the cart comes in as a string
+    tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});// the array as a string is split at the '|', then cast to a number array using map
+    tempCart[bookId]--;// increment the book that was selected
+    tempCart = tempCart.join('|');//temp cart is a string again
+    document.cookie = `cart=${tempCart};path=/;`;//we need to send the updated cart back to the cookie
     buildTotal();
   /*this function is only ever called in the build total function so im assuming it should have access to the cart array in it.
     the index of the book we are removing one from is passed in
