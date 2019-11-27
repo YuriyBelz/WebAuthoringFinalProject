@@ -27,6 +27,17 @@ buildTotal();
 
     var total = 0.00;
     var tax  = 0.00;
+    var shipping = 0.00;
+      
+    //get shipping value from radio buttons
+    if (document.getElementById('r1').checked) {
+    shipping= document.getElementById('r1').value;
+    }else if (document.getElementById('r2').checked) {
+    shipping= document.getElementById('r2').value;
+    }  else if (document.getElementById('r3').checked) {
+    shipping= document.getElementById('r3').value;
+    } 
+    shipping = parseFloat(shipping);  
     grandTotal = 0.00;
     for(var i = 0; i < cart.length; i++){
         if(cart[i] > 0){
@@ -36,13 +47,12 @@ buildTotal();
             " X " +
             cart[i] +  
             " = $" +
-            (cart[i] * prices[i]) + 
-             `<br><input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${i})'><br>`;
+            (cart[i] * prices[i]);
         }
     }
     tax = parseFloat(total * .04); //4% tax
-    grandTotal = (tax + total);
-    document.getElementById("carttotal").innerHTML += "<hr>" + "Total: $" + total.toFixed(2) + "<br>" + "Tax: $" + tax.toFixed(2) + "<br>" + "Grand Total: $" + grandTotal.toFixed(2);
+    grandTotal = (tax + total + shipping);
+    document.getElementById("carttotal").innerHTML += "<hr>" + "Total: $" + total.toFixed(2) + "<br>" + "Tax: $" + tax.toFixed(2) + "<br>" + "Shipping: $" + shipping.toFixed(2) + "<br>" +"Grand Total: $" + grandTotal.toFixed(2);
     document.cookie = `grandtotal=${grandTotal};path=/;`//saves the total for later use
   }
 
@@ -75,10 +85,14 @@ buildTotal();
   else
       window.location.assign("cart.html");}
 
-function goToCheckout(){
-    if(grandTotal>0){
-        window.location.href = "checkout.html";
-    }else{
-        alert("There is nothing in the cart, please add something");
-    }
+
+//empty cart and go to thankyou page
+function completeOrder(){
+    console.log("Order Submitted")
+    var cart = [0,0,0,0,0,0,0,0,0];
+    cart = cart.join('|');
+  document.cookie = `cart=${cart};path=/;`;   
+
+    
 }
+
