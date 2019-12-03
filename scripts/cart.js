@@ -4,6 +4,7 @@ var prices = getCookie("prices").split('|').map(function(item) { return parseFlo
 var titles = getCookie("titles").split('|');
 //titles is just strings
 var grandTotal;
+cartItemCount();
 buildTotal();
 
   /*this function will put together all the main content of the cart.html page. to begin it will be empty
@@ -48,10 +49,14 @@ buildTotal();
 
   function removeOne(bookId){
     var tempCart = getCookie("cart");//the cart comes in as a string
+    var cartCount = getCookie("cartCount");
     tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});// the array as a string is split at the '|', then cast to a number array using map
+    cartcount = parseInt(cartCount);
     tempCart[bookId]--;// increment the book that was selected
+    cartCount--;
     tempCart = tempCart.join('|');//temp cart is a string again
     document.cookie = `cart=${tempCart};path=/;`;//we need to send the updated cart back to the cookie
+    document.cookie = `cart=${cartCount};path=/;`;
     buildTotal();
   /*this function is only ever called in the build total function so im assuming it should have access to the cart array in it.
     the index of the book we are removing one from is passed in
@@ -81,4 +86,10 @@ function goToCheckout(){
     }else{
         alert("There is nothing in the cart, please add something");
     }
+}
+
+function cartItemCount(){
+  var count = getCookie("cartCount");//the cart comes in as a string
+  count = parseInt(count);
+  document.getElementById("a").innerText += '(' + count + ')';
 }

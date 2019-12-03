@@ -4,6 +4,7 @@ it to display*/
 
 document.getElementsByTagName("h1")[0].innerText += getCookie("chosenLink");
 document.getElementsByClassName("bookViewlarge")[parseInt(getCookie("chosenLink"),10)].style.display = "block";
+cartItemCount();
 
 /*this function will add to the cart
 whenever the button is pressed the element on the array corresponding to 
@@ -20,15 +21,25 @@ it just goes to the link first and forgets the script
 
 
 function addToCart(bookId){
+    var cartcount = getCookie("carCount");
     var tempCart = getCookie("cart");//the cart comes in as a string
     tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});// the array as a string is split at the '|', then cast to a number array using map
+    cartCount = parseInt(cartCount);
     tempCart[bookId]++;// increment the book that was selected
+    cartcount++;
     tempCart = tempCart.join('|');//temp cart is a string again
     document.cookie = `cart=${tempCart};path=/;`; // tempCart is put back into the cookie
+    document.cookie = `cart=${cartCount};path=/;`;
 }
 
 function getCookie(name) {
     var value = "; " + document.cookie;
     var parts = value.split("; " + name + "=");
     if (parts.length == 2) return parts.pop().split(";").shift();
+  }
+
+  function cartItemCount(){
+    var count = getCookie("cartCount");//the cart comes in as a string
+    count = parseInt(count);
+    document.getElementById("a").innerText += '(' + count + ')';
   }

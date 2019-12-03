@@ -57,6 +57,23 @@
 	Copyright &copy; 2019 Nozama<br>
 <a href="mailto:yourfirstname@yourlastname.com">RickyAndYuriy@nozama.com</a>
 </footer>
+<script>
+
+    function getCookie(name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift() ;
+      }
+    
+    function cartItemCount(){
+      var count = getCookie("cartCount");//the cart comes in as a string
+      count = parseInt(count);
+      document.getElementById("a").innerText += '(' + count + ')';
+    }
+    
+    cartItemCount();
+    
+    </script>
 </div>
 </body>
 </html>

@@ -14,6 +14,7 @@ if(!document.cookie){
                 "Dune"];
   var prices = [24.99, 8.99, 8.99, 14.99, 19.99, 11.99, 9.99, 9.99, 19.99 ];
   var cart = [0,0,0,0,0,0,0,0,0];
+  var cartCount = 0;
 
   prices = prices.join('|');
   titles = titles.join('|');
@@ -22,6 +23,7 @@ if(!document.cookie){
   document.cookie = `cart=${cart};path=/;`;
   document.cookie = `titles=${titles};path=/;`;
   document.cookie = `prices=${prices};path=/;`;
+  document.cookie = `prices=${cartCount};path=/;`;
   /*the cookie can only store strings so any time the cookie needs to be used it needs to be found in the long string that makes up the cookie,
    the arrays that make up the things we want to store are turned into strings with a '|' between them using the join method, after being retreived
    from the cookie they should be split up using .split('|') and recast to their correct type
@@ -29,6 +31,10 @@ if(!document.cookie){
    in the cookie prices and titles arrays the values should not change*/
 }
 //------------------------------------------------------------------------
+
+cartItemCount();
+
+//---------------------------------------------------------------------
 
 var slideIndex = 0;
 showFeaturedSlides();
@@ -91,4 +97,17 @@ function deadlineCounter(){
   document.getElementById("saleCountdown").textContent = "Sale ends in: D:" + days + " H:" + hours + " M:" + minutes + " S:" + seconds;
 
   }, 1000);
+}
+//---------------------cart item count----------------------------------------------
+
+function cartItemCount(){
+  var count = getCookie("cartCount");//the cart comes in as a string
+  count = parseInt(count);
+  document.getElementById("a").innerText += '(' + count + ')';
+}
+
+function getCookie(name) {
+  var value = "; " + document.cookie;
+  var parts = value.split("; " + name + "=");
+  if (parts.length == 2) return parts.pop().split(";").shift();
 }
