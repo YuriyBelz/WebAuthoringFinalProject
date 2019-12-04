@@ -23,7 +23,7 @@ if(!document.cookie){
   document.cookie = `cart=${cart};path=/;`;
   document.cookie = `titles=${titles};path=/;`;
   document.cookie = `prices=${prices};path=/;`;
-  document.cookie = `prices=${cartCount};path=/;`;
+  document.cookie = `cartCount=${cartCount};path=/;`;
   /*the cookie can only store strings so any time the cookie needs to be used it needs to be found in the long string that makes up the cookie,
    the arrays that make up the things we want to store are turned into strings with a '|' between them using the join method, after being retreived
    from the cookie they should be split up using .split('|') and recast to their correct type
@@ -103,7 +103,7 @@ function deadlineCounter(){
 function cartItemCount(){
   var count = getCookie("cartCount");//the cart comes in as a string
   count = parseInt(count);
-  document.getElementById("a").innerText += '(' + count + ')';
+  document.getElementById("cartNavLink").innerText ='Cart' + '(' + count + ')';
 }
 
 function getCookie(name) {

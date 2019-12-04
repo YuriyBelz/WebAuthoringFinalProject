@@ -55,12 +55,13 @@ body {
   background-image: url(media/catinthehat.jpg);
   color: #221811;
   font-family: Roboto, Verdana, Arial, sans-serif;
+  min-height: 50%;
 }
 
 main {
   padding: 0 0 2em 0;
   margin-left: 200px;
-
+  min-height: 50%;
   background-color: white;
 }
 
@@ -194,7 +195,8 @@ nav legend{
 }
 
 fieldset input {
-  background-color: #708090;;
+  background-color: #708090;
+
 }
 
 .bookcollection {
@@ -345,8 +347,9 @@ nav input{
 
 @media only screen and (max-width: 768px) {
   header {
-    background-image: url(images/nozamalogosmall.jpg);
+    /*background-image: url(media/nozamalogosmall.png);*/
     height: 128px;
+    background-image: none;
   }
 
   h1 {

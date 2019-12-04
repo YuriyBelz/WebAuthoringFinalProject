@@ -22,7 +22,7 @@
     <li><a href="books.html">Browse</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="jobs.html">Jobs</a></li>
-    <li><a href="cart.html">Cart</a></li>
+    <li><a href="cart.html" id="cartNavLink">Cart</a></li>
   </ul>
   <div id="navrefine"><!--this is where the refine book display buttons will go-->
     <fieldset>
@@ -149,10 +149,10 @@ function getCookie(name) {
     if (parts.length == 2) return parts.pop().split(";").shift() ;
   }
 
-function cartItemCount(){
+  function cartItemCount(){
   var count = getCookie("cartCount");//the cart comes in as a string
   count = parseInt(count);
-  document.getElementById("a").innerText += '(' + count + ')';
+  document.getElementById("cartNavLink").innerText ='Cart' + '(' + count + ')';
 }
 
 cartItemCount();

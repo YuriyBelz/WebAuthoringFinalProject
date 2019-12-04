@@ -21,15 +21,16 @@ it just goes to the link first and forgets the script
 
 
 function addToCart(bookId){
-    var cartcount = getCookie("carCount");
+    var cartCount = getCookie("cartCount");
     var tempCart = getCookie("cart");//the cart comes in as a string
     tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});// the array as a string is split at the '|', then cast to a number array using map
     cartCount = parseInt(cartCount);
     tempCart[bookId]++;// increment the book that was selected
-    cartcount++;
+    cartCount++;
     tempCart = tempCart.join('|');//temp cart is a string again
     document.cookie = `cart=${tempCart};path=/;`; // tempCart is put back into the cookie
-    document.cookie = `cart=${cartCount};path=/;`;
+    document.cookie = `cartCount=${cartCount};path=/;`;
+    cartItemCount();
 }
 
 function getCookie(name) {
@@ -41,5 +42,6 @@ function getCookie(name) {
   function cartItemCount(){
     var count = getCookie("cartCount");//the cart comes in as a string
     count = parseInt(count);
-    document.getElementById("a").innerText += '(' + count + ')';
+    document.getElementById("cartNavLink").innerText ='Cart' + '(' + count + ')';
   }
+  

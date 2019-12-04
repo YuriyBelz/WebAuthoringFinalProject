@@ -37,7 +37,7 @@ buildTotal();
             " X " +
             cart[i] +  
             " = $" +
-            (cart[i] * prices[i]) + 
+            (cart[i] * prices[i]).toFixed(2) + 
              `<br><input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${i})'><br>`;
         }
     }
@@ -56,7 +56,8 @@ buildTotal();
     cartCount--;
     tempCart = tempCart.join('|');//temp cart is a string again
     document.cookie = `cart=${tempCart};path=/;`;//we need to send the updated cart back to the cookie
-    document.cookie = `cart=${cartCount};path=/;`;
+    document.cookie = `cartCount=${cartCount};path=/;`;
+    cartItemCount();
     buildTotal();
   /*this function is only ever called in the build total function so im assuming it should have access to the cart array in it.
     the index of the book we are removing one from is passed in
@@ -71,15 +72,6 @@ buildTotal();
     if (parts.length == 2) return parts.pop().split(";").shift() ;
   }
 
-  function cartCheck(){
-  var tempCart = getCookie("cart");
-  tempCart = tempCart.split('|').map(function(item) { return parseInt(item, 10);});
-  var sum = tempCart.reduce(function(a, b) { return a + b; }, 0);
-  if(sum == 0) 
-      alert("There is nothing in the cart, please add something");
-  else
-      window.location.assign("cart.html");}
-
 function goToCheckout(){
     if(grandTotal>0){
         window.location.href = "checkout.html";
@@ -91,5 +83,5 @@ function goToCheckout(){
 function cartItemCount(){
   var count = getCookie("cartCount");//the cart comes in as a string
   count = parseInt(count);
-  document.getElementById("a").innerText += '(' + count + ')';
+  document.getElementById("cartNavLink").innerText ='Cart' + '(' + count + ')';
 }
