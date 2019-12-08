@@ -88,7 +88,9 @@ function completeOrder(){
     console.log("Order Submitted")
     var cart = [0,0,0,0,0,0,0,0,0];
     cart = cart.join('|');
-  document.cookie = `cart=${cart};path=/;`;   
+  document.cookie = `cart=${cart};path=/;`; 
+    document.cookie = `cartCount=${0};path=/;`;
+cartItemCount();
 
     
 }
