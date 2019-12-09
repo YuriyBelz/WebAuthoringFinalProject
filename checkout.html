@@ -28,11 +28,11 @@
   </ul>
 </nav>
 <main>
-    <span>&nbsp</span>
+    <span>&nbsp;</span>
 <h2>Please review and complete your purchase Below</h2>
 <form action="thankyou.html" onsubmit="completeOrder()">
 <h3>Choose Shipping Method</h3>
-  <input id="r1" type="radio" name ="shipping" value="0.00" onclick = "buildTotal()"checked> Free 7 Day Shipping<br>
+  <input id="r1" type="radio" name ="shipping" value="0.00" onclick = "buildTotal()">checked Free 7 Day Shipping<br>
   <input id= "r2" type="radio"  name ="shipping" value="5.00" onclick = "buildTotal()"> 2 day Shipping $5.00<br>
   <input id= "r3" type="radio" name ="shipping"   value="10.00" onclick = "buildTotal()"> 1 day Shipping $10.00  
 <h3>Order Summary</h3>
@@ -53,6 +53,7 @@
      <br>
     <label for="shippingState">State*</label>
     <select  id="shippingState" required>
+  <option value="">&nbsp;</option>
 	<option value="AL">Alabama</option>
 	<option value="AK">Alaska</option>
 	<option value="AZ">Arizona</option>
@@ -147,9 +148,9 @@
     </select>
     <br>        
     <div id="creditcards">
-    <img src="media/visa.jpg" id="visa">
-    <img src="media/mastercard.jpg" id="mastercard">
-    <img src="media/amex.jpg" id="amex">
+    <img src="media/visa.jpg" id="visa" alt="visa logo">
+    <img src="media/mastercard.jpg" id="mastercard" alt="mastercard logo">
+    <img src="media/amex.jpg" id="amex" alt="amex logo">
     </div>
         
     <button type="submit" id="completeOrderbutton">Complete Order</button>
