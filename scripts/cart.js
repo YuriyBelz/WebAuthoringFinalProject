@@ -40,6 +40,7 @@ buildTotal();
             (cart[i] * prices[i]).toFixed(2) + 
              `<br><input type='button' value='Remove (1)' class='removebutton' onclick='removeOne(${i})'><br>`;
         }
+		  document.getElementById("carttotal").innerHTML += '<input type="button" value="Check Out" onclick = "goToCheckout()" id ="jobForm">'
     }
     tax = parseFloat(total * .04); //4% tax
     grandTotal = (tax + total);

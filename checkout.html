@@ -30,9 +30,9 @@
 <main>
     <span>&nbsp;</span>
 <h2>Please review and complete your purchase Below</h2>
-<form action="thankyou.html" onsubmit="completeOrder()">
+<form action="thankyou.html" onsubmit="completeOrder()" id ="jobForm">
 <h3>Choose Shipping Method</h3>
-  <input id="r1" type="radio" name ="shipping" value="0.00" onclick = "buildTotal()">checked Free 7 Day Shipping<br>
+  <input id="r1" type="radio" name ="shipping" value="0.00" onclick = "buildTotal()" checked> Free 7 Day Shipping<br>
   <input id= "r2" type="radio"  name ="shipping" value="5.00" onclick = "buildTotal()"> 2 day Shipping $5.00<br>
   <input id= "r3" type="radio" name ="shipping"   value="10.00" onclick = "buildTotal()"> 1 day Shipping $10.00  
 <h3>Order Summary</h3>
@@ -152,7 +152,7 @@
     <img src="media/mastercard.jpg" id="mastercard" alt="mastercard logo">
     <img src="media/amex.jpg" id="amex" alt="amex logo">
     </div>
-        
+    <br>    
     <button type="submit" id="completeOrderbutton">Complete Order</button>
                   
 </form> 
